@@ -1,3 +1,2 @@
-fastapi
+fastapi[all]
 uvicorn[standard]
-fastapi_keycloak
