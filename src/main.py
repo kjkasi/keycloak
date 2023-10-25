@@ -7,12 +7,14 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="http://host.docker.internal:8085/auth/realms/Test/protocol/openid-connect/token")
+
+# http://localhost:8085/realms/test/protocol/openid-connect/token
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="http://host.docker.internal:8085/realms/test/protocol/openid-connect/token")
 # idp = FastAPIKeycloak(
 #     server_url="http://host.docker.internal:8085/auth",
-#     client_id="test-client",
-#     client_secret="GzgACcJzhzQ4j8kWhmhazt7WSdxDVUyE",
-#     admin_client_secret="BIcczGsZ6I8W5zf0rZg5qSexlloQLPKB",
+#     client_id="api",
+#     client_secret="XXZypkhOPRoaPlWbLb8X8eazMn843alj",
+#     admin_client_secret="E6Cn5aM6Z1S5yIrERqLVCjDPOwffRWbX",
 #     realm="Test",
 #     callback_uri="http://localhost:8081/callback"
 # )
